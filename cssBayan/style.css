@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+h1{
+    font-size: 1.8em;
+}
+.container{
+    margin:0 auto;
+    max-width: 70%;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label{
+    font-size: 0.85em;
+    font-weight: bold;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.label span{
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0;
+}
+.acor-wrapper:hover .label{
+     color: black;
+}
+.label:hover{
+    color: black;
+}
+.label:hover span{
+    opacity: 1;
+    transition: 0.5s;
+}
+.acor-body{
+    height: auto;
+    max-height: 0em;
+    width:  90%;
+    display: block;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    opacity: 1;
+}
+.acor-img{
+    height:auto;
+    width:  70%;
+}
+.check{
+    display: none;
+}
+.acor-wrapper{
+    max-width: 70%;
+}
+.acor-wrapper .check:checked + label + .acor-body{
+
+    height: auto;
+    max-height: 40em;
+    transition:max-height 0.5s;
+    opacity: 1;
+}
+.acor-wrapper .check:checked + label{
+    color: black;
+}
+.acor-wrapper .check:checked + label span {
+    transform: rotate(45deg);
+    transition: 0.5s;
+
+}
+.acor-wrapper:hover span{
+    opacity: 1;
+}
+@media screen and (min-width:320px) {
+    body{
+        font-size: 1.2em;
+    }
+    .acor-wrapper{
+        max-width: 90%;
+    }
+    .container{
+        max-width: 90%;
+    }
+    h1{
+        font-size: 1.8em;
+    }
+    .label{
+        font-size: 0.7em;
+    }
+}
+@media screen and (min-width:768px) {
+    body{
+        font-size: 1.4em;
+    }
+    .container{
+        max-width: 70%;
+    }
+    h1{
+        font-size: 1.9em;
+    }
+    .label{
+        font-size: 0.8em;
+    }
+}
+@media screen and (min-width:992px) {
+    .label{
+        cursor: pointer;
+    }
+    body{
+        font-size: 2em;
+    }
+}
