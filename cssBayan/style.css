@@ -43,7 +43,7 @@ h1{
 }
 .acor-body{
     height: auto;
-    max-height: 0px;
+    max-height: 0em;
     width:  90%;
     display: block;
     overflow: hidden;
@@ -63,7 +63,7 @@ h1{
 .acor-wrapper .check:checked + label + .acor-body{
 
     height: auto;
-    max-height: 400px;
+    max-height: 40em;
     transition:max-height 0.5s;
     opacity: 1;
 }
