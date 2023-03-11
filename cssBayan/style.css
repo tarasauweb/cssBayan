@@ -21,3 +21,77 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+.label{
+    font-size: 0.85em;
+    font-weight: bold;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.label span{
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0;
+}
+.label:hover{
+    color: black;
+}
+.label:hover span{
+    opacity: 1;
+    transition: 0.5s;
+}
+.acor-body{
+    height: auto;
+    max-height: 0px;
+    width:  90%;
+    display: block;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    opacity: 1;
+}
+.acor-img{
+    height:auto;
+    width:  70%;
+}
+.check{
+    display: none;
+}
+.acor-wrapper{
+    max-width: 70%;
+}
+.acor-wrapper .check:checked + label + .acor-body{
+
+    height: auto;
+    max-height: 400px;
+    transition:max-height 0.5s;
+    opacity: 1;
+}
+.acor-wrapper .check:checked + label{
+    color: black;
+}
+.acor-wrapper .check:checked + label span {
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 1;
+}
+.acor-wrapper:hover span{
+    opacity: 1;
+}
+@media screen and (min-width:320px) {
+    body{
+        font-size: 1.2em;
+    }
+    .acor-wrapper{
+        max-width: 90%;
+    }
+    .container{
+        max-width: 90%;
+    }
+    h1{
+        font-size: 1.8em;
+    }
+    .label{
+        font-size: 0.7em;
+    }
+}
