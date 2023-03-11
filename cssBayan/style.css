@@ -34,6 +34,9 @@ h1{
     font-weight: bold;
     opacity: 0;
 }
+.acor-wrapper:hover .label{
+     color: black;
+}
 .label:hover{
     color: black;
 }
@@ -73,7 +76,7 @@ h1{
 .acor-wrapper .check:checked + label span {
     transform: rotate(45deg);
     transition: 0.5s;
-    opacity: 1;
+
 }
 .acor-wrapper:hover span{
     opacity: 1;
